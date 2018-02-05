@@ -19,7 +19,7 @@ filmRouter.post('/', function(req, res){
 
 //create new review
 filmRouter.post('/:id', function(req, res){
-  films[req.params.id].reviews.push(req.body);
+  films[req.params.id].addReview(req.body);
   res.json({data: films});
 })
 
